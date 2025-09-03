@@ -1,5 +1,5 @@
  server:
-  port: 8081   # Or 9090 if you want, but keep it same everywhere
+  port: 8081
 
 spring:
   application:
@@ -27,11 +27,11 @@ eureka:
 resilience4j:
   retry:
     instances:
-      ratingHotelService:   # matches with @Retry(name="ratingHotelService")
+      ratingHotelService:
         max-attempts: 3
         wait-duration: 2s
 
 spring:
   cloud:
     config:
-      enabled: false   # disables Config Server search
+      enabled: false
